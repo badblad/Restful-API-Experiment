@@ -189,7 +189,7 @@ public final class RestfulCaller {
 			if (StringUtils.isNotEmpty(firstName) && StringUtils.isEmpty(lastName)) {
 				if (((JSONObject) info).getString("first").equals(firstName)) {
 					summary.put("firstName", firstName);
-					summary.put("lastName", ((JSONObject) info).getString("first"));
+					summary.put("lastName", ((JSONObject) info).getString("last"));
 					summary.put("email", ((JSONObject) info).getString("email"));
 					curriculum = ((JSONObject) info).get("studentClasses");
 					summary.put("gpa", calculateGPA(curriculum));
@@ -199,8 +199,8 @@ public final class RestfulCaller {
 			}
 
 			//Case 3: We have last name, but no first name.
-			if (StringUtils.isNotEmpty(lastName) && StringUtils.isEmpty(lastName)) {
-				if (((JSONObject) info).getString("first").equals(firstName)) {
+			if (StringUtils.isNotEmpty(lastName) && StringUtils.isEmpty(firstName)) {
+				if (((JSONObject) info).getString("last").equals(lastName)) {
 					summary.put("firstName", ((JSONObject) info).getString("first"));
 					summary.put("lastName", lastName);
 					summary.put("email", ((JSONObject) info).getString("email"));
@@ -233,7 +233,7 @@ public final class RestfulCaller {
 		final JSONObject classAndGrade = new JSONObject();
 		JSONArray curriculumInfo = (JSONArray) curriculum;
 		for (Object clax : curriculumInfo) {
-			int grade = ((JSONObject) clax).getInt("grade");
+			double grade = ((JSONObject) clax).getDouble("grade");
 			int id = ((JSONObject) clax).getInt("id");
 			switch ("" + id) {
 				case "1":
