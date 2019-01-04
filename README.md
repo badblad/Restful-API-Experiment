@@ -8,9 +8,9 @@ This is an example of Restful API using JAX_RS and Jersey. In order to run this 
 
 There are a plenty guides on the web relating to this issue. here are sample screenshots of values that I have used in this project:
 
-<img src="https://github.com/badblad/Restful-API-Experiment/blob/featrue/restfulAPI/art/raw/Tomcat%20Config.png" alt="Tomcat">
+<img src="https://github.com/badblad/Restful-API-Experiment/blob/master/art/raw/Tomcat%20Config.png" alt="Tomcat">
 <br>
-<img src="https://github.com/badblad/Restful-API-Experiment/blob/featrue/restfulAPI/art/raw/War%20Config.png" alt="WAR">
+<img src="https://github.com/badblad/Restful-API-Experiment/blob/master/art/raw/War%20Config.png" alt="WAR">
 
 # API Calls:
 
